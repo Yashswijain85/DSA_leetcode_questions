@@ -1,4 +1,4 @@
-## Time complexity --> O(logn)
+## Time complexity --> O(logn) --> because we are recursively calling the self.myPow(x,n) once in every call and which will continue till n reduces to 1, which leads to logarithmic no. of recursive calls 
 class Solution:
     def myPow(self, x: float, n: int) -> float:
         # base case condition
