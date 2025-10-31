@@ -1,5 +1,6 @@
-Time complexity : O(n)
-Space complexity : O(n)
+# Algo 1: 
+# Time complexity : O(n)
+# Space complexity : O(n)
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         nums_count = {}
@@ -15,3 +16,14 @@ class Solution:
                 return True
         else:
             return False
+
+# Algo 2:
+# Time complexity : O(n.logn)
+# Space complexity : O(1)
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        nums.sort()
+        for i in range(1, len(nums)):
+            if nums[i] == nums[i - 1]:
+                return True
+        return False
