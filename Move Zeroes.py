@@ -14,3 +14,16 @@ class Solution:
             insert_pos += 1
 # Time complexity : O(n)
 # Space complexity : O(1)
+
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        insert_pos = 0 
+
+        for i in range(len(nums)): 
+            if nums[i] != 0:
+                nums[insert_pos],nums[i] = nums[i],nums[insert_pos]
+                insert_pos += 1
+
+# Time complexity -- O(n)
+# Space complexity -- O(1)
